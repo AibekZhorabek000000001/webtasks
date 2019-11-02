@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		button{
+			height: 20px;
+		}
+		.line{
+			text-decoration: line-through;
+		}
+	</style>
+</head>
+<body>
+	<div id="web_task">
+		<button onclick="Myfunction('web_task_label')">Finish</button>
+		<label id="web_task_label">Finish web tasks</label>
+	</div>
+	<div id="gym">	
+		<button onclick="Myfunction('gym_label')">Finish</button>
+		<label id="gym_label">Go to gym</label>
+	</div>
+	<div id="home">
+		<button onclick="Myfunction('home_label')">Finish</button>
+		<label id="home_label">Clean home</label>
+	</div>
+	<div id="project">
+		<button onclick="Myfunction('project_label')">Finish</button>
+		<label id="project_label">Start project</label>
+	</div>
+	<div id="calculus">
+		<button onclick="Myfunction('calculus_label')">Finish</button>
+		<label id="calculus_label">Prepare to calculus</label>
+	</div>
+
+	
+</body>
+<script type="text/javascript">
+	function Myfunction(id){
+		var x = document.getElementById(id);
+		console.log(x)
+		x.classList.add("line");
+	}
+	function delete_function(){
+		var y = document.getElementByClassName('')
+	}
+</script>
+</html>

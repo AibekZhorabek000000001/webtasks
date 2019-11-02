@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <style>
+		#cars{
+		  display:flex;
+		  flex-wrap:wrap;
+		}
+		.card{
+		  position:relative;
+		  width:150px;
+		  margin:5px;
+		}
+		.card .basket{
+		  background-color: white;
+		  position:absolute;
+		  right:5px;
+		  top:5px;
+		  z-index:8;
+		}
+		#insideBasket{
+		  border:1px solid black;
+		  text-align:center;
+		}
+	</style>
+    
+  </head>
+
+  <body>
+    <div id="insideBasket"><span id="items">0</span> items, total: <span id="sum">0</span>$</div>
+    <div id="cars">
+      
+    </div>
+  </body>
+  <script type="text/javascript">
+  	let cars = [{brand:'Toyota',model:'Camry','year':1999,'price':20000,image_url:"toyota.jpg"},{brand:'BMW',model:'X6',year:2014,price:25000,image_url:"bmw.jpg"},{brand:'Daewoo',model:'Nexia',year:2007,price:15000,image_url:"daewoo.jpg"}];
+
+let idCars = document.getElementById('cars');
+
+for(let car of cars){
+    let div = document.createElement('div');
+    div.className = 'card';
+
+    let image = document.createElement('img');
+    image.src = car.image_url;
+    image.className = 'card';
+
+    let basket = document.createElement('img');
+    basket.src = 'addBtton.png';
+    basket.className = 'basket';
+    basket.id = car.price;
+    basket.setAttribute('status','done');
+
+    div.appendChild(basket);
+    div.append(image);
+    div.append(car.brand + " " + car.model);
+    idCars.appendChild(div);	
+}
+
+let v = document.querySelectorAll('.basket');
+
+for(let click of v){
+    click.addEventListener('click', () =>{
+        let sum = document.getElementById('sum');
+        let items = document.getElementById('items');
+        if(click.getAttribute('status') == 'done'){
+            sum.innerHTML = sum.innerHTML * 1 + click.id * 1;
+            items.innerHTML = items.innerHTML * 1 + 1;
+            click.setAttribute('status','none');
+            click.src = 'dollar-symbol.png';
+        }
+        else{
+            sum.innerHTML = sum.innerHTML * 1 - click.id * 1;
+            items.innerHTML = items.innerHTML * 1 - 1;
+            click.setAttribute('status','done');
+            click.src = 'add-to-cart.png';
+        }
+    });
+}
+  </script>
+</html>

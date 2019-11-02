@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<script src="js1.js">
+</script>
+<head>
+	<title>add users</title>
+	<style type="text/css">
+		.header{
+			border-bottom: 2px solid gray;
+			box-shadow: 3px 3px 2px gray;
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			width: 100%;
+		}
+		.notifications{position: absolute; right: 100px;top: 10px;}
+		.your_logo{
+			font-family: fantasy;
+			font-size: 25px;
+		}
+		.your{color: gray; margin-left: 20px;}
+		.logo{color: red;}
+		input{width: 250px;}
+		.input_type{display: flex; flex-direction: row; align-items: center;}
+		.search_image{width:25px; height: 25px;}
+		.handbell_image{width:30px; height: 30px;position: absolute;right: -30px;top:-3px;}
+		.woman_image{width:30px; height: 30px; position: absolute;right: -70px;top:-3px;}
+		}
+		.back_home_admin{
+			margin: 100px;
+		}
+		li a{
+			display: block;
+			text-align: center;
+			text-decoration: none;
+			padding-right: 25px
+
+
+		}
+		li{float: left; list-style-type: none;}
+		li a:hover {background-color: purple;}
+		.dashboard_users{
+			margin-top: 90px;
+		}
+		.Add_users button{
+			padding: 5px;
+			position: absolute;
+			right: 10px;
+			top: 150px;
+			background: purple;		
+		}
+		.Adding{
+			position: absolute;
+			right: -1000px;
+			top: 130px;
+		}
+
+		.setActive{
+
+		}
+	
+	</style>
+</head>
+<body>
+	<div class="header">
+		<div class="your_logo">
+			<label><span class="your">your </span><span class="logo "> logo</span></label>
+		</div>
+		<div class="notifications">
+			<div class="input_type">
+				<img class="search_image" src="search_image.png">
+				<input type="text" name="Search" placeholder="Search e.g. live instagram channel">
+			</div>
+			<img class="handbell_image" src="handbell.png">
+			<img class="woman_image" src="face_woman.jpg">
+		</div>
+	</div>
+	
+	<div class="back_home_admin">
+		<p><-- Back Home / Admin / User Managments </p>
+	</div>
+	<div class= users_reports>
+		<ul>
+		  <li><a href="#users">Users</a></li>
+		  <li><a href="#reports">Reports</a></li>
+		  <li><a href="#requests">Requests</a></li>
+		  <li><a href="#disabled_users">Disabled Users</a></li>
+		  <li><a href="#...">. . .</a></li>
+		</ul>
+	</div>
+	<div class="dashboard">
+		<div class="dashboard_users">
+			<h3>Dashboard Users</h3>
+			<div class="Add_users">
+				<button onclick="absoluteFunction()">Add Users</button>
+			</div>
+			
+		</div>
+	</div>
+	<div class="UsersList">
+		<label class="accountStatus"><input type="checkbox" name="accountStatus" value="accountStatus"> Account Status</label>
+	</div>
+	<div class=Adding>
+		<h3>Add new user: </h3>
+		<p>Lorem ipsum is simply dummy text of the printing and typesetting industry.
+		Lorem Ipsum has been the industry's standart dummy.</p>
+		<label for="name">Name</label>
+		<br>
+		<input class="basic-slide" id="name" type="text" placeholder="Your best name: " />
+		<br>
+		<label for="email">Email</label>
+		<br>
+		<input class="basic-slide" id="email" type="text" placeholder="enter your email: "/>
+		<br>
+		<label for="phone">Phone</label>
+		<br>
+		<input class="basic-slide" id="name" type="phone" placeholder="phone: " />
+		<div class=select_type>
+			<p for="pet-select">Account type </p>
+			<select name="pets" id="pet-select">
+			    <option value="">--Please choose an option--</option>
+			    <option value="admin">Admin</option>
+			    <option value="masterAdmin">Master Admin</option>
+				<option value="user">User</option>	 
+			</select>
+		</div>
+		<p class="setActive"><input type="checkbox" value="setActive">Set Active</p>
+		<button class="addNewUser">add new user</button>
+
+	</div>
+</body>
+</html>
