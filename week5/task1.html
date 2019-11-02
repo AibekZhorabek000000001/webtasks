@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    
+    <script defer>
+      function determine() {
+        var a = document.getElementById('s11').value;
+        var b = document.getElementById('s12').value;
+        var c = document.getElementById('s13').value;
+        var d = document.getElementById('s21').value;
+        var e = document.getElementById('s22').value;
+        var f = document.getElementById('s23').value;
+        var g = document.getElementById('s31').value;
+        var h = document.getElementById('s32').value;
+        var i = document.getElementById('s33').value;
+        var formula = "|A|=A(EI-FH)-B(DI-FG)+C(DH-EG)";
+        var R = (a * e * i)+(d*h*c) + (b*f*g)-((c*e*g)+(d*b*i)+(h*f*a));
+        document.getElementById("result").innerHTML = R;
+      document.getElementById("result_of_text").innerHTML = a+"("+e+"*"+i+"−"+f+"*"+h+")"+"−"+b+"*"+"("+d+"*"+i+"−"+f+"*"+g+")"+c+"("+d+"*"+h+"−"+e+"*"+g+")"+"="+R;
+    </script>
+    <style>
+        body{
+          background-image: url("bachground_image1.jpg");
+          background-repeat: no-repeat;
+          background-size: 100%;
+        }
+        #matrix{
+          display:flex;
+          width:267px;
+          flex-wrap:wrap;
+          margin-bottom: 25px;
+          border: 1px solid black;
+          box-shadow: 5px 10px #888888;
+        }
+        #matrix input{
+          
+          width:75px;
+          height: 65px;
+          padding:5px;
+          font-size:40px;
+        }
+        #result{
+          font-size:40px;
+          color:red;
+
+        }
+        #determinant{
+          font-size:24px;
+          color:green;  
+        } 
+        #definition{
+          width: 450px;
+
+        }
+        #text{
+          margin-left: 350px;
+          margin-top: -260px;
+          background-color: yellow;
+          border-radius: 10px;
+          padding: 10px;
+        }
+        #result_text{
+          color: white;
+          background-color: black;
+          border: 1px solid black;
+          border-radius: 5px;
+          width: 50px;
+          height: 20px;
+        }
+        #result_of_text{
+          color: gray;
+          font-weight: Monospace;
+        }
+        p{
+          color: gray;
+          font-family: Georgia;
+          font-size: 17px;
+        }
+        h2{
+          background-color: yellow;
+          border-radius: 10px;
+          width: 500px;
+        }
+    </style>
+  </head>
+
+  <body>
+    <h2>Calculate determine of the given matrix</h2>
+    <div id="main">
+      <div id="matrix">
+        <input type="text" placeholder="s11" id="s11"/>
+        <input type="text" placeholder="s12" id="s12"/>
+        <input type="text" placeholder="s13" id="s13"/>
+        <input type="text" placeholder="s21" id="s21"/>
+        <input type="text" placeholder="s22" id="s22"/>
+        <input type="text" placeholder="s23" id="s23"/>
+        <input type="text" placeholder="s31" id="s31"/>
+        <input type="text" placeholder="s32" id="s32"/>
+        <input type="text" placeholder="s33" id="s33"/>
+      </div>
+      <button onclick="determine()" id="determinant" >Find determinant</button>
+    </div>
+
+    <div id="text">
+      <div id="result_text">result: </div>
+      <div id="result">NaN</div>
+      <p id="result_of_text">|A| = A(EI − FH) − B(DI − FG) + C(DH − EG) = NaN</p>
+      <div id="definition">
+        <p>Defenition
+          <span style="font-weight: bold;">Lorem Ipsum</span><br>
+          is simply dummy text of the printing and typesetting industry.
+          Lorem Ipsum has been the industry's standard dummy text ever since the
+          1500s, when an unknown printer took a galley of type and scrambled it to
+          make a type specimen book. It has survived not only five centuries, but also
+          the leap into electronic typesetting, remaining essentially unchanged.
+        </p>
+      </div>
+    </div>
+  </body>
+
+</html>
