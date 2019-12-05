@@ -7,6 +7,11 @@ header{
 	margin-left: 3px;
 	padding-top: 5px;
 }
+.headers{
+  margin-left: 10px;
+  text-decoration: none;
+  font-family: cursive;
+}
 .WhatsappImage{
 	float: right;
 	width: 55px;
@@ -23,24 +28,56 @@ header{
 	padding-bottom: 5px;
 	border-bottom: 1px solid gray;
 }
+.categoring{
+  text-decoration: none;
+}
+.signup{
+	text-decoration: none;
+	float: right;
+	margin: 5px;
+	font-size: 20px;
+	font-family: unset;
+}
 .nameOfSite{
 	width: 170px;
 	background-color: #ADADAD;
 	margin-top: 2px;
 	padding: 1px;
 	border-radius: 10px;
-}.categoriesLink{
+}
+.categoriesLink{
 	position: absolute;
-	top: 80px;
+	top: 90px;
 	left: 250px;
 }
 .icons{
+	display: flex;
+	flex-direction: row;
 	float: right;
-	margin-top: -50px;
+	margin-top: -40px;
+	margin-right: 10px;
+	width: 250px;
+	height: 100px;
 }
+#search-form{
+	width: 150px;
+	height: 20px;
+	padding-left: 10px;
+	padding-right: 15px;
+	color: #ccc;
+	border-radius: 10px;
+	outline: none;
+}
+.searchButton{
+	background-color: transparent;
+}
+
 .icon{
-	width: 30px;
-	height: 30px;
+	width: 27px;
+	height: 27px;
+	margin-right: -10px;
+	margin-left: 8px;
+
 }
 .mainWord{
    -webkit-text-stroke: 1px black;
@@ -48,17 +85,74 @@ header{
    font-size: 34px;
    text-shadow:
        3px 3px 0 #000,
-     -1px -1px 0 #000,  
+     -1px -1px 0 #000,
       1px -1px 0 #000,
       -1px 1px 0 #000,
        1px 1px 0 #000;
 }
 .list{
-
 	width: 340px;
 	border-radius: 10px;
+
 }
 li a{
 	text-decoration: none;
 	font-size: 24px;
+}
+.main{
+  position: static;
+  width: 900px;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 350px;
+  margin-top: -350px;
+
+}
+.product-image{
+  width: 250px;
+  height: 230px;
+  margin: 15px;
+  padding: 10px;
+  padding-top: 20px;
+  border-bottom: 1px solid gray;
+}
+.description{
+  font-family: cursive;
+  text-align: center;
+  width: 290px;
+}
+.product-image:hover{
+  background-color: #3e8e41;
+  color: white;
+  border-radius: 10px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.15);
+  transition: all 0.3s ease-in-out;
+  transform: scale(1.2, 1.2);
+}
+.product-image::after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  border-radius: 5px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  transition: opacity 0.3s ease-in-out;
+}
+.main-description{
+  margin-top: 10px;
+  background-color: #24587A;
+  border-radius: 10px;
+  padding: 10px;
+}
+.description1{
+  color: white;
+  font-style: italic;
+  font-size: 20px;
+}
+.description2{
+  background-image:linear-gradient(blue, yellow, green);
+  padding: 5px 2px;
 }
