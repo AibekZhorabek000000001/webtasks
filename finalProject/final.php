@@ -67,10 +67,16 @@
 
 		</ul>
 	</div>
+	<div class="delete_function">
+		<form method="get" action="upload.php">
+			<div class="input-group-delete">
+				<input type="text" name="delete">
+			</div>
+			<input type="submit" value="delete" name="delete_button">
+		</form>
+	</div>
 	<div class="main">
-		<script>console.log('Aibek');</script>
 		<?php
-			 echo "<script>console.log('Aknur');</script>";
 			$conn = new mysqli('localhost', 'root', '', 'for project');
 			$sql = "SELECT * FROM products";
 			$result = $conn->query($sql);
@@ -78,7 +84,6 @@
 				while ($row = $result->fetch_assoc()) {
 					?>
 					<div class="item">
-							<input class="delete_button" type="submit" name="delete" value="delete"/>
 					<?php
 						echo '<img src = "data:image/jpeg;base64,'.base64_encode($row['img_src']).'" class="product-image" />';
 					?>
